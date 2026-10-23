@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 423.53 115.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ea9611;
+      }
+
+      .cls-2 {
+        font-family: CCRegenerationVariable-Regular, CCRegeneration;
+        font-size: 56.67px;
+        font-variation-settings: 'wght' 400, 'ital' 0;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.04em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <rect class="cls-1" x="2.5" y="2.5" width="418.53" height="110.46" rx="17.5" ry="17.5"/>
+        <path class="cls-3" d="M403.53,5c8.28,0,15,6.72,15,15v75.46c0,8.28-6.72,15-15,15H20c-8.28,0-15-6.72-15-15V20c0-8.28,6.72-15,15-15h383.53M403.53,0H20C8.97,0,0,8.97,0,20v75.46c0,11.03,8.97,20,20,20h383.53c11.03,0,20-8.97,20-20V20c0-11.03-8.97-20-20-20h0Z"/>
+      </g>
+      <text class="cls-2" transform="translate(115.69 77.54)"><tspan x="0" y="0">L</tspan><tspan class="cls-4" x="28.56" y="0">e</tspan><tspan class="cls-5" x="59.84" y="0">v</tspan><tspan x="91.8" y="0">el 2</tspan></text>
+    </g>
+  </g>
+</svg>

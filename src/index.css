@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'CCRegeneration';
+  src: url('/font/FONNTS.COM-CCREGENERATION.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/font/NotoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/font/NotoSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "NotoSans", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "CCRegeneration", "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", "NotoSans", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: #F1F5F9; /* slate-100 fallback */
+  color: #1E293B; /* slate-800 fallback */
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+button, .font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeInUp 0.25s ease-out both;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E2E8F0; /* slate-200 */
+}
+::-webkit-scrollbar-thumb {
+  background: #94A3B8; /* slate-400 */
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748B; /* slate-500 */
+}
+
+/* Layout overrides for maximizing Grid Panel height and responsiveness */
+.arena-left-column > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+}
+
+.arena-left-column .flex-1.w-full.flex.items-center.justify-center.flex-row {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+}
+
+/* Target the outer container wrapper inside ParkingGrid */
+.arena-left-column .flex-1.w-full.flex.items-center.justify-center.flex-row > div:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+}
+
+/* Target the Board Viewport Wrapper inside ParkingGrid */
+.arena-left-column div:has(> #parking-canvas) {
+  width: 100% !important;
+  height: 100% !important;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Hide the sidebar button panel from GridPanel to keep left column clean */
+.arena-left-column .flex-1.w-full.flex.items-center.justify-center.flex-row > div:nth-child(2) {
+  display: none !important;
+}
+
+/* Custom Floating & Wiggling Animation (Ngambang) for Splash Title Screen */
+@keyframes floatWiggle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-4px) rotate(0.4deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(-0.4deg);
+  }
+}
+
+.animate-float-wiggle {
+  animation: floatWiggle 4.5s ease-in-out infinite;
+}
+
+/* Breathing / Pulsing Scale Animation (Besar Kecil) for titles */
+@keyframes titleScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+.animate-title-1 {
+  animation: fadeInUp 0.6s ease-out both, titleScale 4s ease-in-out infinite 0.6s;
+}
+
+.animate-title-2 {
+  animation: fadeInUp 0.8s ease-out both, titleScale 4s ease-in-out infinite 1.2s;
+}
+
+.animate-title-3 {
+  animation: fadeInUp 1.0s ease-out both, titleScale 4s ease-in-out infinite 1.8s;
+}
+
+/* Hide scrollbars for clean custom horizontal lists */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Responsive modal card height: cap at 90% of the visible viewport.
+   Falls back to vh, then uses dvh so mobile browser chrome (URL bar)
+   doesn't cause overflow. */
+@utility max-h-modal {
+  max-height: 90vh;
+  max-height: 90dvh;
+}
+
+/* Custom Scale-in Animation for Modals */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-scaleIn {
+  animation: scaleIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Mobile landscape specific styles (height-based for rotated viewports) */
+@media (max-height: 520px) {
+  .mobile-landscape-hidden {
+    display: none !important;
+  }
+  .mobile-landscape-flex {
+    display: flex !important;
+  }
+  .mobile-landscape-block {
+    display: block !important;
+  }
+}
+
+
+
