@@ -49,6 +49,14 @@ Lalu buka URL yang muncul di terminal, biasanya:
 ### ⚠️ Jangan buka `dist/index.html` dengan drag-and-drop ke browser
 Membuka file lewat protokol `file://` akan gagal (CORS / asset tidak termuat). Selalu sajikan `dist/` lewat HTTP, misalnya `npm run preview`, atau deploy ke hosting web.
 
+## Mengganti Video Panduan
+
+Video panduan muncul setelah tombol "Mulai Bermain" pada tujuan pembelajaran diklik.
+Video dapat dibuka kembali melalui ikon video di kiri tombol mute pada halaman pilihan level. Ubah `TUTORIAL_VIDEO_ID` di `src/tutorial.ts`
+dengan ID setelah `watch?v=` pada tautan YouTube. Contoh:
+`https://www.youtube.com/watch?v=AWM_xNIJwpI` menggunakan ID `AWM_xNIJwpI`.
+Pemutar dan tautan "Buka di YouTube" otomatis memakai ID yang sama.
+
 ## Script Lain
 
 | Perintah | Keterangan |

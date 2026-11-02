@@ -5,6 +5,7 @@ import { audio } from "@lib/audio";
 interface ObjectivesModalProps {
   isOpen: boolean;
   onContinue: () => void;
+  onStartPlaying: () => void;
 }
 
 interface Slide {
@@ -54,7 +55,7 @@ const slides: Slide[] = [
   },
 ];
 
-export const ObjectivesModal: React.FC<ObjectivesModalProps> = ({ isOpen, onContinue }) => {
+export const ObjectivesModal: React.FC<ObjectivesModalProps> = ({ isOpen, onContinue, onStartPlaying }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   if (!isOpen) return null;
@@ -67,7 +68,8 @@ export const ObjectivesModal: React.FC<ObjectivesModalProps> = ({ isOpen, onCont
   const handleNext = () => {
     audio.playClick();
     if (isLast) {
-      handleClose();
+      onStartPlaying();
+      setCurrentSlide(0);
     } else {
       setCurrentSlide((prev) => prev + 1);
     }

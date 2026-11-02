@@ -6,6 +6,7 @@ import { DashboardPage } from "@pages/dashboard/DashboardPage";
 import { ObjectivesModal } from "@pages/dashboard/components/ObjectivesModal";
 import { ArenaPage } from "@pages/arena/ArenaPage";
 import { audio } from "@lib/audio";
+import { TutorialVideoModal } from "./components/TutorialVideoModal";
 
 type Screen = "splash" | "dashboard" | "arena";
 
@@ -21,6 +22,7 @@ export default function App() {
   const [activeTooltipLevelId, setActiveTooltipLevelId] = useState<number | null>(null);
   const [showFullscreenPrompt, setShowFullscreenPrompt] = useState(false);
   const [showObjectivesModal, setShowObjectivesModal] = useState(false);
+  const [showTutorialVideo, setShowTutorialVideo] = useState(false);
 
   const game = useGameState(initialLevel, isDirectQuiz ? "analysis" : "algorithm");
 
@@ -206,6 +208,7 @@ export default function App() {
 
         {currentScreen === "dashboard" && (
           <DashboardPage
+            onOpenTutorial={() => setShowTutorialVideo(true)}
             progress={game.progress}
             activeTooltipLevelId={activeTooltipLevelId}
             setActiveTooltipLevelId={setActiveTooltipLevelId}
@@ -259,10 +262,16 @@ export default function App() {
       {/* Objectives Modal - Tujuan Pembelajaran (shown once when dashboard opens) */}
       <ObjectivesModal
         isOpen={showObjectivesModal}
+        onStartPlaying={() => {
+          setShowObjectivesModal(false);
+          setShowTutorialVideo(true);
+        }}
         onContinue={() => {
           setShowObjectivesModal(false);
         }}
       />
+
+      <TutorialVideoModal isOpen={showTutorialVideo} onClose={() => setShowTutorialVideo(false)} />
 
       {/* Footer Copyright: Hanya tampil di halaman tanpa kontrol (Splash & Dashboard) */}
       {currentScreen !== "arena" && (

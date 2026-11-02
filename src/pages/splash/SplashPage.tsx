@@ -25,7 +25,7 @@ export const SplashPage: React.FC<SplashPageProps> = ({ onStart }) => {
       <div className="w-full h-full flex justify-end items-center">
         
         {/* Title and button stack: centered items inside this column container */}
-        <div className="flex flex-col items-center max-w-[180px] sm:max-w-[180px]  md:max-w-[180px] lg:max-w-[320px] 2xl:max-w-[460px] w-full z-10 mr-12 sm:mr-14 xl:mr-24 2xl:mr-40">
+        <div className="flex flex-col items-center max-w-[180px] sm:max-w-[180px] md:max-w-[180px] lg:max-w-[320px] 2xl:max-w-[460px] w-full z-10 mr-12 sm:mr-14 xl:mr-24 2xl:mr-40">
           
           {/* Floating container for titles to create a smooth bobbing/wiggle effect */}
           <div className="w-full flex flex-col items-center animate-float-wiggle">
