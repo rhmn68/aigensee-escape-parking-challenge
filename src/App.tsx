@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Smartphone, Monitor, RotateCcw } from "lucide-react";
+import { Smartphone, RotateCcw } from "lucide-react";
 import { LEVELS } from "@levels";
 import { useGameState } from "@hooks/useGameState";
 import { SplashPage } from "@pages/splash/SplashPage";
@@ -147,14 +147,6 @@ export default function App() {
       {showFullscreenPrompt && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-900/60 backdrop-blur-md p-4 select-none">
           <div className="relative max-w-sm w-full mx-auto bg-white/95 border border-slate-200/50 shadow-2xl rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center animate-scaleIn">
-            {/* Pulsing screen icon */}
-            <div className="relative flex items-center justify-center mb-6">
-              <div className="absolute w-20 h-20 bg-blue-100/50 rounded-full animate-ping opacity-75" />
-              <div className="w-16 h-16 bg-blue-50 border border-blue-150 rounded-2xl flex items-center justify-center text-3xl shadow-sm z-10">
-                <Monitor size={32} aria-hidden="true" />
-              </div>
-            </div>
-
             <h3 className="text-lg sm:text-xl font-black text-slate-800 tracking-tight mb-2">
               Mode Layar Penuh
             </h3>
