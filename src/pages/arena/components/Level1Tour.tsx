@@ -18,61 +18,61 @@ interface TourStep {
 
 const STEPS: TourStep[] = [
   {
-    title: "Selamat datang di Level 1! 👋",
+    title: "Selamat datang di Level 1!",
     body:
       "Misimu: bantu Taxi Kuning (mobil [1] berkartu putih) keluar dari area parkir. Yuk kenali dulu tiap tombol dan cara bermainnya. Klik Lanjut untuk mulai.",
   },
   {
     selector: ".arena-left-column",
-    title: "Area Parkir 🅿️",
+    title: "Area Parkir",
     body:
       "Ini papan parkirnya. Taxi Kuning [1] terjebak tegak di kolom 6 dan harus turun ke bawah untuk keluar. Mobil Biru [6] yang mendatar menghalangi jalurnya.",
   },
   {
     selector: "#tour-mode-bk",
-    title: "Mode Skenario BK 🧠",
+    title: "Mode Skenario BK",
     body:
       "Mode utama (Berpikir Komputasional). Di sini kamu menyusun urutan langkah (algoritma) lebih dulu, lalu menjalankannya. Pastikan mode ini yang aktif saat bermain Level 1.",
   },
   {
     selector: "#tour-mode-bebas",
-    title: "Mode Bebas 🔥",
+    title: "Mode Bebas",
     body:
       "Mode latihan. Kamu bisa menggeser mobil langsung di papan dengan tangan tanpa menyusun langkah. Bagus untuk coba-coba, tapi untuk menyelesaikan level gunakan Mode Skenario BK.",
   },
   {
     selector: "#tour-guide-btn",
-    title: "Tombol Panduan ❗",
+    title: "Tombol Panduan",
     body:
       "Lupa caranya? Klik tombol ini kapan saja untuk membuka kembali panduan interaktif seperti sekarang.",
   },
   {
     selector: "#select-vehicle-input",
-    title: "1) Pilih Mobil 🚗",
+    title: "1) Pilih Mobil",
     body:
       "Langkah pertama menyusun algoritma: pilih mobil yang mau digeser. Kamu juga bisa langsung mengklik mobilnya di papan. Mulailah dengan Mobil Biru [6] yang menghalangi.",
   },
   {
     selector: "#select-direction-input",
-    title: "2) Pilih Arah ↔️",
+    title: "2) Pilih Arah",
     body:
       "Tentukan arah geser. Mobil mendatar hanya bisa Kiri/Kanan, mobil tegak hanya bisa Atas/Bawah. Untuk membuka jalur, geser Mobil Biru ke Kanan.",
   },
   {
     selector: "#select-multiplier-input",
-    title: "3) Jumlah Langkah 🔢",
+    title: "3) Jumlah Langkah",
     body:
       "Berapa petak sekali jalan. Misalnya pilih 4x untuk menambahkan 4 langkah sekaligus — berguna saat Taxi harus turun jauh ke pintu keluar.",
   },
   {
     selector: "#add-step-btn",
-    title: "4) Tambah Langkah ➕",
+    title: "4) Tambah Langkah",
     body:
       "Klik untuk memasukkan langkah ke daftar algoritma di bawahnya. Ulangi proses Pilih Mobil → Arah → Jumlah → Tambah sampai rencanamu lengkap.",
   },
   {
     selector: "#step-list-container",
-    title: "Daftar Algoritma 📋",
+    title: "Daftar Algoritma",
     body:
       "Semua langkahmu tersusun di sini dan dijalankan berurutan dari atas. Seret kartu untuk mengurutkan ulang, atau tarik ke luar / klik ikon tempat sampah untuk menghapus.",
   },
@@ -84,12 +84,12 @@ const STEPS: TourStep[] = [
   },
   {
     selector: "#tour-run-btn",
-    title: "Tombol Jalankan ▶",
+    title: "Tombol Jalankan →",
     body:
       "Menjalankan algoritmamu! Mobil bergerak otomatis sesuai urutan langkah. Jika berhasil, Taxi keluar dan kamu lanjut ke Kuis Pemahaman.",
   },
   {
-    title: "Siap Bermain! 🎉",
+    title: "Siap Bermain!",
     body:
       "Solusi tercepat Level 1 (5 langkah): geser Mobil Biru [6] ke Kanan 1x, lalu geser Taxi Kuning [1] ke Bawah 4x, dan klik Jalankan. Selamat mencoba!",
   },

@@ -62,27 +62,13 @@ export const ArenaPage: React.FC<ArenaPageProps> = (props) => {
   const [showTour, setShowTour] = useState(false);
   const [lockedQuizAnswers, setLockedQuizAnswers] = useState<{ [questionIdx: number]: number }>({});
 
-  // Auto-start the interactive Level 1 tour the first time the player reaches
-  // Level 1 in Skenario BK mode (persisted in localStorage).
+  // Show the Level 1 tour whenever the player enters Skenario BK mode.
   useEffect(() => {
-    if (isLevel1 && !props.isSandboxMode && !isDirectUrl) {
-      let seen = false;
-      try {
-        seen = localStorage.getItem("ep_level1_tour_done") === "1";
-      } catch {
-        /* ignore storage errors */
-      }
-      if (!seen) setShowTour(true);
-    }
+    setShowTour(isLevel1 && !props.isSandboxMode && !isDirectUrl);
   }, [isLevel1, props.isSandboxMode, isDirectUrl]);
 
   const handleCloseTour = () => {
     setShowTour(false);
-    try {
-      localStorage.setItem("ep_level1_tour_done", "1");
-    } catch {
-      /* ignore storage errors */
-    }
   };
 
   // Adjust state inline during render when activeLevelId, ctStage or isSandboxMode changes, using Refs to avoid unnecessary re-renders

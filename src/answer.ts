@@ -3,8 +3,8 @@
  * Disesuaikan 100% dengan Visual Gameplay Nyata (Bak Biru, Hatchback Cyan, Truk, Taxi Kuning, dll.)
  * di mana optimalSteps = threeStarThreshold (ambang batas optimal resmi dari game untuk 3 Bintang).
  * 
- * 🌐 Live URL Demo: https://glenrioariesto.github.io/escape-parking-challenge/
- * 📂 Repository: https://github.com/glenrioariesto/escape-parking-challenge
+ * Live URL Demo: https://glenrioariesto.github.io/escape-parking-challenge/
+ * Repository: https://github.com/glenrioariesto/escape-parking-challenge
  */
 
 export interface ParkingMoveAction {

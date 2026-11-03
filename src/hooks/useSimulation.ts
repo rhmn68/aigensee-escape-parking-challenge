@@ -143,12 +143,12 @@ export function useSimulation(
       const isSolved = isLevelSolved(activeVehicles, gridRows, gridCols, defaultExitRow, defaultExitCol);
       if (isSolved) {
         // Kick off exit animation for all player vehicles at edge
-        appendLog("🚗 Kendaraan keluar dari parkir...");
+        appendLog("Kendaraan keluar dari parkir...");
         setPhase("exit_anim");
         setCurrentStepIndex(0);
       } else {
-        appendLog("🏁 Semua langkah selesai. Namun, belum semua Taxi sampai pintu keluar!");
-        appendLog("💡 Tips: Analisis kembali mobil yang menghalangi.");
+        appendLog("Semua langkah selesai. Namun, belum semua Taxi sampai pintu keluar!");
+        appendLog("Tips: Analisis kembali mobil yang menghalangi.");
         audio.playError();
 
         setCollisionInfo({
@@ -172,7 +172,7 @@ export function useSimulation(
     const timer = setTimeout(() => {
       const target = activeVehicles.find((v) => v.id === step.vehicleId);
       if (!target) {
-        appendLog(`⛔ Gagal pada Langkah #${currentStepIndex + 1}: Kendaraan tidak ditemukan!`);
+        appendLog(`Gagal pada Langkah #${currentStepIndex + 1}: Kendaraan tidak ditemukan!`);
         audio.playError();
         setTimeout(() => {
           setIsSimulating(false);
@@ -201,7 +201,7 @@ export function useSimulation(
         }
         const vName = getVehicleDisplayName(target);
         const reason = check.reason || "Terjadi tabrakan!";
-        appendLog(`💥 TABRAKAN pada Langkah #${currentStepIndex + 1}: ${vName} — "${reason}"!`);
+        appendLog(`TABRAKAN pada Langkah #${currentStepIndex + 1}: ${vName} — "${reason}"!`);
         audio.playError();
 
         setCollisionInfo({

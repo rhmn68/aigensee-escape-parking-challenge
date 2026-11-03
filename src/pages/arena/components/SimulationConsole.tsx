@@ -22,11 +22,11 @@ export const SimulationConsole: React.FC<SimulationConsoleProps> = ({
             <div
               key={idx}
               className={`py-1 ${
-                log.includes("⛔") || log.includes("💥")
+                log.startsWith("Gagal pada Langkah") || log.startsWith("TABRAKAN pada Langkah")
                   ? "text-rose-600 font-bold bg-rose-50 px-1.5 border-l-2 border-rose-500"
                   : log.includes("✓")
                   ? "text-emerald-600 font-bold"
-                  : log.includes("🏁") || log.includes("🏆")
+                  : log.startsWith("Semua langkah selesai")
                   ? "text-amber-600 font-black"
                   : "text-slate-500"
               }`}

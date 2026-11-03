@@ -1,5 +1,5 @@
 import React from "react";
-import { RefreshCcw, ArrowRight } from "lucide-react";
+import { RefreshCcw, ArrowRight, Trophy, Star } from "lucide-react";
 
 interface ReflectionProps {
   levelId: number;
@@ -27,7 +27,7 @@ export const Reflection: React.FC<ReflectionProps> = ({
       <div className="absolute top-0 left-0 right-0 h-1.5 bg-blue-600" />
 
       <div className="text-center">
-        <span className="text-4xl mb-2 inline-block animate-bounce">🏆</span>
+        <span className="text-4xl mb-2 inline-block animate-bounce"><Trophy size={40} aria-hidden="true" /></span>
         <h2 className="text-lg font-black font-sans text-slate-800 tracking-tight">
           Skenario Simulasi Berhasil!
         </h2>
@@ -50,7 +50,7 @@ export const Reflection: React.FC<ReflectionProps> = ({
                   : "text-slate-350 select-none opacity-40"
               }`}
             >
-              ★
+              <Star size={30} fill="currentColor" aria-hidden="true" />
             </span>
           ))}
         </div>

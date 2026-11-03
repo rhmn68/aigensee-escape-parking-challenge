@@ -47,7 +47,7 @@ export const CollisionModal: React.FC<CollisionModalProps> = ({
         </div>
 
         <h3 className={`text-xl sm:text-2xl font-black ${isIncomplete ? "text-amber-400" : "text-red-400"} tracking-tight mb-2`}>
-          {isIncomplete ? "Program Belum Selesai! 🏁" : "Terjadi Tabrakan! 💥"}
+          {isIncomplete ? "Program Belum Selesai!" : "Terjadi Tabrakan!"}
         </h3>
 
         <div className={`${isIncomplete ? "bg-amber-950/40 border-amber-800/50" : "bg-red-950/40 border-red-800/50"} border rounded-2xl p-4 w-full my-4 text-center`}>

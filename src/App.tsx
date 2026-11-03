@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Smartphone, Monitor, RotateCcw } from "lucide-react";
 import { LEVELS } from "@levels";
 import { useGameState } from "@hooks/useGameState";
 import { SplashPage } from "@pages/splash/SplashPage";
@@ -113,10 +114,10 @@ export default function App() {
             <div className="absolute w-36 h-36 rounded-full border-4 border-dashed border-blue-500/60 animate-[spin_6s_linear_infinite]" />
             {/* Inner pulsing ring */}
             <div className="absolute w-28 h-28 rounded-full border-2 border-blue-400/30 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]" />
-            {/* Phone emoji rotating */}
-            <div className="text-7xl animate-[spin_3s_ease-in-out_infinite]" style={{ animationTimingFunction: 'cubic-bezier(0.45,0.05,0.55,0.95)' }}>📱</div>
+            {/* Rotating phone icon */}
+            <div className="text-7xl animate-[spin_3s_ease-in-out_infinite]" style={{ animationTimingFunction: 'cubic-bezier(0.45,0.05,0.55,0.95)' }}><Smartphone size={72} aria-hidden="true" /></div>
             {/* Arrow indicators */}
-            <span className="absolute -right-2 -bottom-2 text-3xl animate-[bounce_1.2s_infinite]">↩</span>
+            <span className="absolute -right-2 -bottom-2 text-3xl animate-[bounce_1.2s_infinite]"><RotateCcw size={30} aria-hidden="true" /></span>
           </div>
 
           <p className="text-sm text-slate-300 max-w-xs my-8 leading-relaxed font-medium">
@@ -125,7 +126,7 @@ export default function App() {
 
           {/* Visual instruction arrows */}
           <div className="flex items-center gap-4 bg-slate-800/80 border border-slate-700 rounded-2xl px-8 py-4 shadow-xl">
-            <span className="text-4xl">📱</span>
+            <span className="text-4xl"><Smartphone size={40} aria-hidden="true" /></span>
             <div className="flex flex-col items-center gap-1">
               <div className="flex gap-1">
                 <span className="text-blue-400 font-black text-lg">←</span>
@@ -134,7 +135,7 @@ export default function App() {
               </div>
               <div className="text-slate-500 text-[10px]">landscape mode</div>
             </div>
-            <span className="text-4xl rotate-90">📱</span>
+            <span className="text-4xl rotate-90"><Smartphone size={40} aria-hidden="true" /></span>
           </div>
 
           <p className="mt-6 text-slate-500 text-xs">
@@ -146,11 +147,11 @@ export default function App() {
       {showFullscreenPrompt && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-900/60 backdrop-blur-md p-4 select-none">
           <div className="relative max-w-sm w-full mx-auto bg-white/95 border border-slate-200/50 shadow-2xl rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center animate-scaleIn">
-            {/* Pulsing Screen Emoji/Icon */}
+            {/* Pulsing screen icon */}
             <div className="relative flex items-center justify-center mb-6">
               <div className="absolute w-20 h-20 bg-blue-100/50 rounded-full animate-ping opacity-75" />
               <div className="w-16 h-16 bg-blue-50 border border-blue-150 rounded-2xl flex items-center justify-center text-3xl shadow-sm z-10">
-                📺
+                <Monitor size={32} aria-hidden="true" />
               </div>
             </div>
 

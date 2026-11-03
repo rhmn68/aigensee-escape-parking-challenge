@@ -134,7 +134,7 @@ export const GridPanel: React.FC<GridPanelProps> = ({
       {isDevMode && (
         <div className="mt-3 p-4 bg-slate-900 border border-slate-700 text-slate-200 rounded-2xl w-full max-w-[520px] mx-auto shadow-md">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-xs font-black text-amber-400">📋 Koordinat Dinding (Walls JSON)</span>
+            <span className="text-xs font-black text-amber-400">Koordinat Dinding (Walls JSON)</span>
             <button
               type="button"
               onClick={() => {

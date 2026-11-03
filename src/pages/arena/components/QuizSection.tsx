@@ -143,7 +143,7 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
               : "bg-rose-50 border-rose-200 text-rose-800"
           }`}>
             <div className="flex gap-1.5 items-center font-black mb-1 font-mono uppercase tracking-wider text-[10px]">
-              {isCorrect ? "Jawaban Benar! 🎉" : "Saran Pembelajaran 💡"}
+              {isCorrect ? "Jawaban Benar!" : "Saran Pembelajaran"}
             </div>
             <p className="font-sans font-medium text-slate-650">{question.explanation}</p>
           </div>

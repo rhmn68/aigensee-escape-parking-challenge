@@ -400,8 +400,8 @@ export const StepBuilder: React.FC<StepBuilderProps> = ({
 
   const getDirectionSymbol = (dir: string) => {
     switch (dir) {
-      case "left": return "◀";
-      case "right": return "▶";
+      case "left": return "←";
+      case "right": return "→";
       case "up": return "▲";
       case "down": return "▼";
       default: return "";
@@ -457,8 +457,8 @@ export const StepBuilder: React.FC<StepBuilderProps> = ({
                   {!selectedVehicleId && <option value="">Pilih mobil</option>}
                   {selectedVehicle?.direction === "horizontal" && (
                     <>
-                      <option value="left">◀ Kiri</option>
-                      <option value="right">▶ Kanan</option>
+                      <option value="left">← Kiri</option>
+                      <option value="right">→ Kanan</option>
                     </>
                   )}
                   {selectedVehicle?.direction === "vertical" && (

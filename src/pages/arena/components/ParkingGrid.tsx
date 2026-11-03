@@ -1318,7 +1318,7 @@ const canvas = canvasRef.current;
 
       {isDevMode && (
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-amber-500/90 text-slate-950 backdrop-blur px-3 py-1.5 rounded-full border border-amber-600 shadow-sm flex items-center gap-1.5 pointer-events-none z-10 text-[9px] font-bold">
-          🛠️ Mode Dev Aktif: Klik slot kosong untuk atur koordinat dinding (wall)
+          Mode Dev Aktif: Klik slot kosong untuk atur koordinat dinding (wall)
         </div>
       )}
     </div>
