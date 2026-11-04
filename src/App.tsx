@@ -266,12 +266,10 @@ export default function App() {
 
       <TutorialVideoModal isOpen={showTutorialVideo} onClose={() => setShowTutorialVideo(false)} />
 
-      {/* Footer Copyright: Hanya tampil di halaman tanpa kontrol (Splash & Dashboard) */}
-      {currentScreen !== "arena" && (
-        <footer className="fixed bottom-1.5 left-0 right-0 z-40 text-center pointer-events-none select-none text-[10px] sm:text-xs text-black font-display tracking-wider">
-          Copyright 2026 Pusat Perbukuan
-        </footer>
-      )}
+      {/* Copyright on every page */}
+      <footer className="fixed bottom-1.5 left-0 right-0 z-40 text-center pointer-events-none select-none text-[10px] sm:text-xs text-black font-display tracking-wider">
+        © Copyright 2026 Pusat Perbukuan
+      </footer>
 
     </div>
   );
