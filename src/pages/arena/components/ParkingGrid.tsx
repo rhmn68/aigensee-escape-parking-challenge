@@ -568,7 +568,7 @@ export const ParkingGrid: React.FC<ParkingGridProps> = ({
       ctx.miterLimit = 2;
 
       // Measure text to guarantee horizontal padding (max 72% of cell width) and exact vertical center
-      const metrics = ctx.measureText("KELUAR");
+      const metrics = ctx.measureText("Keluar");
       const maxTextWidth = size * 0.72;
       if (metrics.width > maxTextWidth && metrics.width > 0) {
         const scaleFactor = maxTextWidth / metrics.width;
@@ -581,11 +581,11 @@ export const ParkingGrid: React.FC<ParkingGridProps> = ({
       // Black outline
       ctx.strokeStyle = "#000000";
       ctx.lineWidth = Math.max(2.5, size * 0.065);
-      ctx.strokeText("KELUAR", 0, textY);
+      ctx.strokeText("Keluar", 0, textY);
 
       // White fill with black outline over the zebra cross
       ctx.fillStyle = "#FFFFFF";
-      ctx.fillText("KELUAR", 0, textY);
+      ctx.fillText("Keluar", 0, textY);
 
       ctx.restore();
     };
@@ -686,7 +686,7 @@ export const ParkingGrid: React.FC<ParkingGridProps> = ({
         ctx.font = "bold 8px 'NotoSans', sans-serif";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText("WALL", wx + cellSize / 2, wy + cellSize / 2);
+        ctx.fillText("Dinding", wx + cellSize / 2, wy + cellSize / 2);
       } else {
         // Production mode: completely transparent
       }
@@ -880,7 +880,7 @@ export const ParkingGrid: React.FC<ParkingGridProps> = ({
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText(
-          v.id === "R" ? "TAXI" : getVehicleBaseName(v, vehiclesRef.current).toUpperCase(),
+          v.id === "R" ? "Taksi" : getVehicleBaseName(v, vehiclesRef.current),
           vx + vw / 2,
           vy + vh / 2 + 14
         );

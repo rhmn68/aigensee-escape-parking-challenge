@@ -35,7 +35,7 @@ export const Reflection: React.FC<ReflectionProps> = ({
 
       {/* Step Comparison Metrics */}
       <div className="bg-slate-50 rounded-xl p-1.5 lg:p-4 border border-slate-200 mb-2 text-center">
-        <span className="text-xs font-mono text-slate-400 uppercase tracking-widest block mb-1 font-bold">
+        <span className="text-xs font-mono text-slate-400  tracking-widest block mb-1 font-bold">
           Evaluasi Efisiensi Solusi
         </span>
 

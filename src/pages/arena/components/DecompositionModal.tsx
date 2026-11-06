@@ -88,7 +88,7 @@ export const DecompositionModal: React.FC<DecompositionModalProps> = ({
         <div className="p-3 sm:p-5 md:p-6 lg:p-8 flex-1 min-h-0 overflow-y-auto flex flex-col">
           <div className={`p-3 sm:p-4 md:p-5 lg:p-6 border rounded-xl sm:rounded-2xl transition-all duration-300 m-auto ${slide.bgClass}`}>
             <div className="flex-1 min-w-0">
-              <h4 className="text-[10px] sm:text-xs md:text-sm lg:text-base font-black text-slate-800 font-display uppercase tracking-wide">
+              <h4 className="text-[10px] sm:text-xs md:text-sm lg:text-base font-black text-slate-800 font-display  tracking-wide">
                 {slide.title}
               </h4>
               <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-slate-650 mt-1 sm:mt-1.5 md:mt-2 lg:mt-3 leading-relaxed md:leading-relaxed lg:leading-loose font-medium">

@@ -417,7 +417,7 @@ export const StepBuilder: React.FC<StepBuilderProps> = ({
             <div className="grid grid-cols-[1.3fr_1fr_0.7fr] gap-1 sm:gap-2.5">
               {/* Pick Vehicle */}
               <div className="flex flex-col gap-0.5 sm:gap-1 min-w-0">
-                <label className="text-[7px] sm:text-[10px] uppercase font-mono font-black text-slate-400">
+                <label className="text-[7px] sm:text-[10px]  font-mono font-black text-slate-400">
                   Mobil
                 </label>
                 <select
@@ -441,7 +441,7 @@ export const StepBuilder: React.FC<StepBuilderProps> = ({
 
               {/* Pick Direction */}
               <div className="flex flex-col gap-0.5 sm:gap-1 min-w-0">
-                <label className="text-[7px] sm:text-[10px] uppercase font-mono font-black text-slate-400">
+                <label className="text-[7px] sm:text-[10px]  font-mono font-black text-slate-400">
                   Arah
                 </label>
                 <select
@@ -472,7 +472,7 @@ export const StepBuilder: React.FC<StepBuilderProps> = ({
 
               {/* Pick Step Multiplier (Perkalian Langkah) */}
               <div className="flex flex-col gap-0.5 sm:gap-1 min-w-0">
-                <label className="text-[7px] sm:text-[10px] uppercase font-mono font-black text-slate-400">
+                <label className="text-[7px] sm:text-[10px]  font-mono font-black text-slate-400">
                   Langkah
                 </label>
                 <select
@@ -508,7 +508,7 @@ export const StepBuilder: React.FC<StepBuilderProps> = ({
           {/* Header Title */}
           <div className="flex mobile-landscape-hidden flex-col sm:flex-row sm:items-center justify-between gap-1.5 border-b border-slate-200 p-2 sm:p-3 md:p-4 mb-1 sm:mb-2 flex-shrink-0">
             <div className="flex flex-col gap-0.5 min-w-0">
-              <h4 className="text-[10px] sm:text-xs md:text-sm font-black text-slate-800 uppercase tracking-wider font-display">
+              <h4 className="text-[10px] sm:text-xs md:text-sm font-black text-slate-800  tracking-wider font-display">
                 Algoritma
               </h4>
               {steps.length > 0 && (

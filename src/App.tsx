@@ -130,7 +130,7 @@ export default function App() {
             <div className="flex flex-col items-center gap-1">
               <div className="flex gap-1">
                 <span className="text-blue-400 font-black text-lg">←</span>
-                <span className="text-slate-400 text-xs font-semibold uppercase tracking-widest self-center">Putar</span>
+                <span className="text-slate-400 text-xs font-semibold  tracking-widest self-center">Putar</span>
                 <span className="text-blue-400 font-black text-lg">→</span>
               </div>
               <div className="text-slate-500 text-[10px]">landscape mode</div>

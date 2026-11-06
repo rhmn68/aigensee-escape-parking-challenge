@@ -11,7 +11,7 @@ export const SimulationConsole: React.FC<SimulationConsoleProps> = ({
     <div className="md:col-span-1 flex flex-col justify-between max-h-full overflow-hidden min-h-0 p-1">
       <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
         <div className="flex items-center justify-between border-b border-slate-200 pb-2 mb-3 flex-shrink-0">
-          <span className="text-xs font-black text-slate-800 uppercase tracking-wider font-display">
+          <span className="text-xs font-black text-slate-800  tracking-wider font-display">
             Konsol Jalur
           </span>
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

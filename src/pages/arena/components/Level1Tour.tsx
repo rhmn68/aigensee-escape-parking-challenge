@@ -74,7 +74,7 @@ const STEPS: TourStep[] = [
     selector: "#step-list-container",
     title: "Daftar Algoritma",
     body:
-      "Semua langkahmu tersusun di sini dan dijalankan berurutan dari atas. Seret kartu untuk mengurutkan ulang, atau tarik ke luar / klik ikon tempat sampah untuk menghapus.",
+      "Semua langkahmu tersusun di sini dan dijalankan berurutan dari atas. Seret kartu untuk mengurutkan ulang, atau tarik ke luar/klik ikon tempat sampah untuk menghapus.",
   },
   {
     selector: "#tour-reset-btn",

@@ -26,7 +26,7 @@
 
 @theme {
   --font-sans: "NotoSans", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "CCRegeneration", "Space Grotesk", sans-serif;
+  --font-display: "NotoSans", sans-serif;
   --font-mono: "JetBrains Mono", "NotoSans", ui-monospace, SFMono-Regular, monospace;
 }
 
